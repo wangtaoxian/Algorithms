@@ -11,8 +11,9 @@ public class Transaction {
         this.amount = amount;
     }
 
+    //1.2.19
     public Transaction(String transaction) {
-        String[] str = transaction.split("\\s+");
+        String[] str = transaction.split("\\s+");    //regex
         who = str[0];
         when = new Date(str[1]);
         amount = Double.parseDouble(str[2]);
